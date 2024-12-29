@@ -1,8 +1,21 @@
-export function add(a: number, b: number): number {
-  return a + b;
-}
+import { parseArgs } from "jsr:@std/cli/parse-args";
+import { red } from "jsr:@std/fmt/colors";
 
-// Learn more at https://docs.deno.com/runtime/manual/examples/module_metadata#concepts
 if (import.meta.main) {
-  console.log("Add 2 + 3 =", add(2, 3));
+  const flags = parseArgs(Deno.args, {
+    string: ["path"],
+  });
+
+  if (!flags.path) {
+    console.log(red("Please provide a path"));
+    Deno.exit(1);
+  }
+
+  console.log(flags.path);
+
+  const module = await import(flags.path, {
+    with: { type: "json" },
+  });
+
+  console.log(module);
 }
