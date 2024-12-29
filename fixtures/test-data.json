@@ -1,0 +1,37 @@
+{
+	"consumer": {
+		"account": {
+			"orders": {
+				"will-call": "Tickets held at the Box Office for collection"
+			}
+		},
+		"purchasing":{
+			"checkout":{
+				"delivery-method": "Despatch Method",
+				"delivery-methods": {
+					"will-call": "Box Office Collection"
+				}
+			}
+		}
+	},
+	"datetime": {
+		"saved-baskets": {
+			"small": "d/L/y",
+			"medium": "d LLL , y",
+			"large": "dd/LL/yyyy tt",
+			"xl": "dd MMM yyyy h:mma"
+		}
+	},
+	"generic": {
+		"forms": {
+			"bill-to-address1": "Address Line 1",
+			"bill-to-address2": "Address Line 2",
+			"bill-to-city": "City",
+			"bill-to-country-code": "Country",
+			"bill-to-postal-code": "Post Code",
+			"bill-to-state": "County",
+			"ship-to-postal-code": "Ship to Post Code",
+			"ship-to-state": "County"
+		}
+	}
+}
