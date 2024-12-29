@@ -1,5 +1,5 @@
 {
   "tasks": {
-    "dev": "deno run --allow-read main.ts --path ./fixtures/test-data.json"
+    "dev": "deno run --allow-read --allow-env main.ts --path ./fixtures/test-data.json"
   }
 }
