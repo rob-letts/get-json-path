@@ -27,10 +27,11 @@ if (import.meta.main) {
 
     const shouldContinueEarly = keys.length === 1;
     if (shouldContinueEarly) {
-      const [{ value: newKey }] = keys
+      const [{ value: newKey }] = keys;
       result = appendToResult(result, newKey);
 
-      if (typeof currentObj[newKey] === "string") {
+      const shouldBreak = typeof currentObj[newKey] === "string";
+      if (shouldBreak) {
         console.log(`Result: ${result}\nnewKey: ${currentObj[newKey]}`);
         break;
       }
